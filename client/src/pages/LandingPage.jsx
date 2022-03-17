@@ -4,7 +4,7 @@ function LandingPage() {
 	return (
 		<Wrapper>
 			<div className='header'>
-				<h4 className='appName'>YouFlix</h4>
+				<h1 className='appName'>YouFlix</h1>
 				<button className='signIn'>Sign-In</button>
 			</div>
 			<div className='mainBody'>
@@ -24,9 +24,10 @@ function LandingPage() {
 export default LandingPage;
 
 const Wrapper = styled.div`
-	min-height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+	min-height: 300vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
 		url('/images/bg.jpg');
+	background-size: contain;
 
 	.subHeading {
 		text-align: center;
