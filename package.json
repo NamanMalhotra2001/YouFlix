@@ -1,8 +1,30 @@
 {
-  "name": "you_flix",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/NamanMalhotra2001/YouFlix.git",
-  "author": "NamanMalhotra2001 <74060787+NamanMalhotra2001@users.noreply.github.com>",
-  "license": "MIT"
+	"name": "youflix",
+	"version": "1.0.0",
+	"description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NamanMalhotra2001/YouFlix.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/NamanMalhotra2001/YouFlix/issues"
+	},
+	"homepage": "https://github.com/NamanMalhotra2001/YouFlix#readme",
+	"dependencies": {
+		"dotenv": "^16.0.0",
+		"express": "^4.17.3",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^6.2.7"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	}
 }
