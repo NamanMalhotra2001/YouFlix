@@ -1,3 +1,18 @@
 * {
 	margin: 0;
 }
+
+::-webkit-scrollbar {
+	width: 13px;
+	height: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: white;
+	border: black 4px solid;
+	border-radius: 100vw;
+}
+
+::-webkit-scrollbar-track {
+	background-color: black;
+}
