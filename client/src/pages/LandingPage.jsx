@@ -17,7 +17,7 @@ function LandingPage() {
               Easy cancellation. No strings attached.
             </h4>
             <div className="getStartHolder">
-              <button className="getStart">Get Started</button>
+              <button className="getStart">Get Started {'>'} </button>
             </div>
           </div>
         </div>
@@ -47,6 +47,7 @@ const Wrapper = styled.div`
   }
 
   .mainHeading {
+	font-size: 70px;
     text-align: center;
   }
 
@@ -55,6 +56,7 @@ const Wrapper = styled.div`
   }
 
   .signIn {
+	font-size: large;
 	align-items: center;
 	justify-content: center;
     height: 35px;
@@ -77,6 +79,12 @@ const Wrapper = styled.div`
   }
 
   .getStart {
+	font-size: xx-large;
+	font: bold;
+	align-items: center;
+	justify-content: center;
+	height: 75px;
+    width: 250px;
     border: none;
     outline: none;
     color: aliceblue;
