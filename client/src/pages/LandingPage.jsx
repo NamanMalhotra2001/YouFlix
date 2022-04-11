@@ -29,20 +29,20 @@ function LandingPage() {
         <div className="watchEv">
           <div className="text">
             <h3 className="watchEv_main">Watch everywhere.</h3>
-            <h4 className="watchEv_sub">
+            <p className="watchEv_sub">
               Stream unlimited movies and TV shows on your phone, tablet,
               laptop, and TV.
-            </h4>
+            </p>
           </div>
           <div className="image">potty</div>
         </div>
         <div className="prof">
           <div className="text">
             <h3 className="prof_main">Create profiles for kids.</h3>
-            <h4 className="prof_sub">
+            <p className="prof_sub">
               Send children on adventures with their favourite characters in a
               space made just for them—free with your membership.
-            </h4>
+            </p>
           </div>
           <div className="image">potty</div>
         </div>
@@ -143,9 +143,10 @@ const Wrapper = styled.div`
 
   .watchEv_sub {
     color: white;
-    font-size: 40px;
-    text-align: right;
-	font: caption;
+    display: flex;
+    flex-direction: column;
+    font-size: 70px;
+    font: caption;
   }
 
   .prof_main {
@@ -157,8 +158,10 @@ const Wrapper = styled.div`
   }
 
   .prof_sub {
+    display: flex;
+    flex-direction: column;
     color: white;
-    font-size: 50px;
+    font-size: 70px;
     text-align: right;
     font: caption;
   }
@@ -172,7 +175,9 @@ const Wrapper = styled.div`
   }
 
   .faqTitle {
-	  color: white;
-	  font-size: 60px;
+    color: white;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
   }
 `;
