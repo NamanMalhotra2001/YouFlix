@@ -7,7 +7,7 @@ export default function App() {
 		<>
 			<Router>
 				<Routes>
-					<Route path='/land' element={<LandingPage />} />
+					<Route path='/' element={<LandingPage />} />
 					<Route path='/signup' element={<SignupPage />} />
 				</Routes>
 			</Router>
