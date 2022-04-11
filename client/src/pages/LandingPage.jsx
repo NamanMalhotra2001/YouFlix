@@ -46,6 +46,11 @@ const Wrapper = styled.div`
     height: 90px;
   }
 
+  .appName {
+	font-size: 45px;
+	color: #ff0000e6;
+  }
+
   .mainHeading {
 	font-size: 70px;
     text-align: center;
