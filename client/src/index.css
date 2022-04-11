@@ -2,6 +2,14 @@
 	margin: 0;
 	border: none;
 	outline: none;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+		sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+	* {
+		cursor: default !important;
+	}
 }
 
 ::-webkit-scrollbar {
