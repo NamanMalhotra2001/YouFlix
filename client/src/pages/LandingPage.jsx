@@ -1,102 +1,90 @@
-import styled from 'styled-components';
-import { MdOutlineArrowForwardIos } from 'react-icons/md';
+import styled from "styled-components";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+import NavBar from "Components/NavBar";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
-	return (
-		<Wrapper>
-			<div className='header'>
-				<h1 className='appName'>YouFlix</h1>
-				<button className='signIn'>Sign-In</button>
-			</div>
-			<div className='mainBodyContainer'>
-				<div className='mainBody'>
-					<div className='headings'>
-						<h1 className='mainHeading'>
-							Enjoy unlimted streaming anywhere, anytime
-						</h1>
-						<h4 className='subHeading'>
-							Easy cancellation. No strings attached.
-						</h4>
-						<div className='getStartHolder'>
-							<button className='getStart'>
-								Get Started <MdOutlineArrowForwardIos />
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</Wrapper>
-	);
+  return (
+    <Wrapper>
+      <NavBar />
+      <div className="mainBodyContainer">
+        <div className="mainBody">
+          <div className="headings">
+            <h1 className="mainHeading">
+              Enjoy unlimted streaming anywhere, anytime
+            </h1>
+            <h4 className="subHeading">
+              Easy cancellation. No strings attached.
+            </h4>
+          </div>
+          <div className="getStartHolder">
+            <button className="getStart">
+              {/* <Link to="/signup"></Link> */}
+              Get Started <MdOutlineArrowForwardIos />
+            </button>
+          </div>
+        </div>
+        <div className="watchEv">
+          <h3 className="watchEv_main">Watch everywhere</h3>
+          <h4 className="watchEv_sub">
+            Stream unlimited movies and TV shows on your phone, tablet, laptop,
+            and TV.
+          </h4>
+        </div>
+      </div>
+    </Wrapper>
+  );
 }
 
 export default LandingPage;
 
 const Wrapper = styled.div`
-	.mainBodyContainer {
-		padding-top: 150px;
-		min-height: 300vh;
-		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)),
-			url('/images/bg.jpg');
-		background-size: contain;
-	}
-
-	.subHeading {
-		text-align: center;
-	}
-
-	.header {
-		background-color: white;
-		height: 90px;
-	}
-
-  .appName {
-	font-size: 45px;
-	color: #ff0000e6;
+  .mainBodyContainer {
+    padding-top: 150px;
+    min-height: 300vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)),
+      url("/images/bg.jpg");
+    background-size: contain;
   }
 
-  .mainHeading {
-	font-size: 70px;
+  .subHeading {
+    font: caption;
+    font-size: 40px;
     text-align: center;
   }
 
-	.headings {
-		color: aliceblue;
-	}
+  .mainHeading {
+    padding-top: 120px;
+    font-size: 70px;
+    text-align: center;
+  }
 
-	.signIn {
-		font-size: large;
-		align-items: center;
-		justify-content: center;
-		height: 35px;
-		width: 100px;
-		color: aliceblue;
-		background-color: red;
-		border-radius: 3px;
-		display: flex;
-		position: absolute;
-		top: 20px;
-		right: 10px;
-		border: none;
-		outline: none;
-	}
+  .headings {
+    color: aliceblue;
+  }
 
-	.getStartHolder {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-	}
+  .getStartHolder {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
-	.getStart {
-		display: flex;
-		font-size: xx-large;
-		align-items: center;
-		justify-content: center;
-		height: 75px;
-		width: 250px;
-		border: none;
-		outline: none;
-		color: aliceblue;
-		margin-top: 40px;
-		background-color: red;
-	}
+  .getStart {
+    cursor: pointer;
+    display: flex;
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 250px;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    margin-top: 40px;
+    background-color: red;
+  }
+
+  .watchEv {
+	  border-color: grey;
+  }
 `;
