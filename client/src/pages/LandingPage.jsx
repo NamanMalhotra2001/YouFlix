@@ -2,8 +2,11 @@ import styled from "styled-components";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import NavBar from "Components/NavBar";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
+  const navigate = useNavigate();
+
   return (
     <Wrapper>
       <NavBar />
@@ -18,8 +21,7 @@ function LandingPage() {
             </h4>
           </div>
           <div className="getStartHolder">
-            <button className="getStart">
-              {/* <Link to="/signup"></Link> */}
+            <button className="getStart" onClick={() => navigate("/signup")}>
               Get Started <MdOutlineArrowForwardIos />
             </button>
           </div>
@@ -85,6 +87,6 @@ const Wrapper = styled.div`
   }
 
   .watchEv {
-	  border-color: grey;
+    border-color: grey;
   }
 `;
