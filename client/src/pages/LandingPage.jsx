@@ -28,18 +28,18 @@ function LandingPage() {
         </div>
         <div className="watchEv">
           <div className="text">
-            <h3 className="watchEv_main">Watch everywhere.</h3>
-            <p className="watchEv_sub">
+            <h3 className="additional_main">Watch everywhere.</h3>
+            <h2 className="additional_sub">
               Stream unlimited movies and TV shows on your phone, tablet,
               laptop, and TV.
-            </p>
+            </h2>
           </div>
           <div className="image">potty</div>
         </div>
         <div className="prof">
           <div className="text">
-            <h3 className="prof_main">Create profiles for kids.</h3>
-            <p className="prof_sub">
+            <h3 className="additional_main">Create profiles for kids.</h3>
+            <p className="additional_sub">
               Send children on adventures with their favourite characters in a
               space made just for them—free with your membership.
             </p>
@@ -108,7 +108,8 @@ const Wrapper = styled.div`
     padding-bottom: 200px;
     display: flex;
     background-color: black;
-    border-block: 5px gray solid;
+    border-top: 10px darkgray solid;
+    border-bottom: 5px darkgray solid;
   }
 
   .prof {
@@ -116,7 +117,7 @@ const Wrapper = styled.div`
     padding-bottom: 200px;
     display: flex;
     background-color: black;
-    border-block: 5px gray solid;
+    border-block: 5px darkgray solid;
   }
 
   .text {
@@ -125,45 +126,30 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: right;
     text-align: center;
+    padding-left: 20%;
   }
 
   .image {
     flex: 1;
     display: flex;
     justify-content: left;
-  }
-
-  .watchEv_main {
-    text-align: left;
-    padding-left: 85px;
     color: white;
-    padding-bottom: 35px;
-    font-size: 50px;
   }
 
-  .watchEv_sub {
+  .additional_main {
+    text-align: left;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 57px;
+  }
+
+  .additional_sub {
     color: white;
     display: flex;
-    flex-direction: column;
-    font-size: 70px;
-    font: caption;
-  }
-
-  .prof_main {
     text-align: left;
-    padding-left: 85px;
-    color: white;
-    padding-bottom: 35px;
-    font-size: 50px;
-  }
-
-  .prof_sub {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    font-size: 70px;
-    text-align: right;
+    /* flex-direction: column; */
     font: caption;
+    font-size: 30px;
   }
 
   .faq {
@@ -171,7 +157,8 @@ const Wrapper = styled.div`
     padding-bottom: 200px;
     display: flex;
     background-color: black;
-    border-block: 5px gray solid;
+    border-top: 10px darkgray solid;
+    border-bottom: 5px darkgray solid;
   }
 
   .faqTitle {
@@ -179,5 +166,6 @@ const Wrapper = styled.div`
     font-size: 60px;
     display: flex;
     justify-content: center;
+    text-align: center;
   }
 `;
