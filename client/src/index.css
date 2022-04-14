@@ -1,3 +1,13 @@
+:root {
+	/* fonts */
+	--font1: 'Caveat';
+	--font2: 'Indie Flower';
+	--font3: 'Open Sans';
+	--font4: 'Quicksand';
+	--font5: 'Marck Script';
+	--font6: 'Shadows Into Light', cursive;
+}
+
 * {
 	margin: 0;
 	border: none;

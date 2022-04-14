@@ -15,6 +15,7 @@ function NavBar() {
 export default NavBar;
 
 const Wrapper = styled.div`
+	z-index: 999;
 	display: flex;
 	background-color: rgba(255, 255, 255, 0.047);
 	position: sticky;
@@ -23,7 +24,6 @@ const Wrapper = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	padding-inline: 10px;
-	z-index: 999;
 
 	.appName {
 		user-select: none;
