@@ -59,9 +59,10 @@ function LandingPage() {
           <h1 className="faqTitle">Frequently Asked Questions</h1>
           <div className="accordion">
             <Accordion
+              className="accordionTab"
               expanded={expanded === "panel1"}
               onChange={handleChange("panel1")}
-              sx={{ backgroundColor: "darkgrey" }}
+              // sx={{ backgroundColor: "darkgrey" }}
             >
               <AccordionSummary
                 expandIcon={<MdExpandMore />}
@@ -69,13 +70,14 @@ function LandingPage() {
                 id="panel1bh-header"
               >
                 <Typography
+                  className="tabText"
                   sx={{ color: "white", width: "33%", flexShrink: 0 }}
                 >
                   What is Youflix?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
+                <Typography className="tabDetails">
                   Youflix is a streaming service that offers a wide variety of
                   award-winning TV shows, movies, anime, documentaries and more
                   – on thousands of internet-connected devices. You can watch as
@@ -86,6 +88,7 @@ function LandingPage() {
               </AccordionDetails>
             </Accordion>
             <Accordion
+              className="accordionTab"
               expanded={expanded === "panel2"}
               onChange={handleChange("panel2")}
             >
@@ -94,12 +97,15 @@ function LandingPage() {
                 aria-controls="panel2bh-content"
                 id="panel2bh-header"
               >
-                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                <Typography
+                  className="tabText"
+                  sx={{ width: "33%", flexShrink: 0 }}
+                >
                   How much does Youflix cost?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
+                <Typography className="tabDetails">
                   Watch Youflix on your smartphone, tablet, Smart TV, laptop, or
                   streaming device, all for one fixed monthly fee. Plans range
                   from 1 million zeni to 1 million 1 zeni a month. No extra
@@ -108,6 +114,7 @@ function LandingPage() {
               </AccordionDetails>
             </Accordion>
             <Accordion
+              className="accordionTab"
               expanded={expanded === "panel3"}
               onChange={handleChange("panel3")}
             >
@@ -116,12 +123,15 @@ function LandingPage() {
                 aria-controls="panel3bh-content"
                 id="panel3bh-header"
               >
-                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                <Typography
+                  className="tabText"
+                  sx={{ width: "33%", flexShrink: 0 }}
+                >
                   Where can I watch?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
+                <Typography className="tabDetails">
                   Watch anywhere, anytime. Sign in with your Youflix account to
                   watch instantly on the web at youflix.com from your personal
                   computer or on any internet-connected device that offers the
@@ -135,6 +145,7 @@ function LandingPage() {
               </AccordionDetails>
             </Accordion>
             <Accordion
+              className="accordionTab"
               expanded={expanded === "panel4"}
               onChange={handleChange("panel4")}
             >
@@ -143,12 +154,15 @@ function LandingPage() {
                 aria-controls="panel4bh-content"
                 id="panel5bh-header"
               >
-                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                <Typography
+                  className="tabText"
+                  sx={{ width: "53%", flexShrink: 0 }}
+                >
                   How do I cancel?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
+                <Typography className="tabDetails">
                   Netflix is flexible. There are no annoying contracts and no
                   commitments. You can easily cancel your account online in two
                   clicks. There are no cancellation fees – start or stop your
@@ -157,6 +171,7 @@ function LandingPage() {
               </AccordionDetails>
             </Accordion>
             <Accordion
+              className="accordionTab"
               expanded={expanded === "panel5"}
               onChange={handleChange("panel5")}
             >
@@ -165,12 +180,15 @@ function LandingPage() {
                 aria-controls="panel5bh-content"
                 id="panel4bh-header"
               >
-                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                <Typography
+                  className="tabText"
+                  sx={{ width: "53%", flexShrink: 0 }}
+                >
                   What can I watch on YouFlix?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
+                <Typography className="tabDetails">
                   Youflix has an extensive library of feature films,
                   documentaries, TV shows, anime, award-winning Youflix
                   originals, and more. Watch as much as you want, anytime you
@@ -179,6 +197,7 @@ function LandingPage() {
               </AccordionDetails>
             </Accordion>
             <Accordion
+              className="accordionTab"
               expanded={expanded === "panel6"}
               onChange={handleChange("panel6")}
             >
@@ -187,12 +206,15 @@ function LandingPage() {
                 aria-controls="panel6bh-content"
                 id="panel6bh-header"
               >
-                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                <Typography
+                  className="tabText"
+                  sx={{ width: "33%", flexShrink: 0 }}
+                >
                   Is YouFlix good for kids?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
+                <Typography className="tabDetails">
                   The Youflix Kids experience is included in your membership to
                   give parents control while kids enjoy family-friendly TV shows
                   and films in their own space. Kids profiles come with
@@ -216,11 +238,19 @@ export default LandingPage;
 
 const Wrapper = styled.div`
   .mainBodyContainer {
-    padding-top: 150px;
-    min-height: 300vh;
+    /* padding-top: 150px; */
+    /* min-height: 300vh; */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)),
       url("/images/bg.jpg");
     background-size: contain;
+  }
+
+  .mainBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 90px);
   }
 
   .subHeading {
@@ -230,7 +260,7 @@ const Wrapper = styled.div`
   }
 
   .mainHeading {
-    padding-top: 120px;
+    /* padding-top: 120px; */
     font-size: 70px;
     text-align: center;
   }
@@ -257,7 +287,7 @@ const Wrapper = styled.div`
     outline: none;
     color: aliceblue;
     margin-top: 40px;
-    margin-bottom: 240px;
+    /* margin-bottom: 240px; */
     background-color: red;
   }
 
@@ -330,6 +360,26 @@ const Wrapper = styled.div`
     width: 950px;
     justify-content: center;
     background-color: black;
+  }
+
+  .accordionTab {
+    background-color: #343333;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .tabText {
+    color: white;
+    font: caption;
+    font-size: 25px;
+    width: 53%;
+  }
+
+  .tabDetails {
+    color: white;
+    font: caption;
+    font-size: 25px;
+    width: 95%;
   }
 
   .faqTitle {
