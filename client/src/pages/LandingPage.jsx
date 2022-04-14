@@ -1,10 +1,20 @@
 import NavBar from "Components/NavBar";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { MdOutlineArrowForwardIos, MdExpandMore } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import * as React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
 
 function LandingPage() {
   const navigate = useNavigate();
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   return (
     <Wrapper>
@@ -47,16 +57,155 @@ function LandingPage() {
         </div>
         <div className="faq">
           <h1 className="faqTitle">Frequently Asked Questions</h1>
-          <div className="dropDownMenu">
-          <ul className="list">
-            <li>What is Youflix?</li>
-            <li>How much does Youflix cost</li>
-            <li>Where can I watch?</li>
-            <li>How do I cancel?</li>
-            <li>What can I watch on YouFlix?</li>
-            <li>Is YouFlix good for kids?</li>
-          </ul>
-        </div>
+          <div className="accordion">
+            <Accordion
+              expanded={expanded === "panel1"}
+              onChange={handleChange("panel1")}
+              sx={{ backgroundColor: "darkgrey" }}
+            >
+              <AccordionSummary
+                expandIcon={<MdExpandMore />}
+                aria-controls="panel1bh-content"
+                id="panel1bh-header"
+              >
+                <Typography
+                  sx={{ color: "white", width: "33%", flexShrink: 0 }}
+                >
+                  What is Youflix?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  Youflix is a streaming service that offers a wide variety of
+                  award-winning TV shows, movies, anime, documentaries and more
+                  – on thousands of internet-connected devices. You can watch as
+                  much as you want, whenever you want, without a single ad – all
+                  for one low monthly price. There's always something new to
+                  discover, and new TV shows and movies are added every week!
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === "panel2"}
+              onChange={handleChange("panel2")}
+            >
+              <AccordionSummary
+                expandIcon={<MdExpandMore />}
+                aria-controls="panel2bh-content"
+                id="panel2bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  How much does Youflix cost?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  Watch Youflix on your smartphone, tablet, Smart TV, laptop, or
+                  streaming device, all for one fixed monthly fee. Plans range
+                  from 1 million zeni to 1 million 1 zeni a month. No extra
+                  costs, no contracts.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === "panel3"}
+              onChange={handleChange("panel3")}
+            >
+              <AccordionSummary
+                expandIcon={<MdExpandMore />}
+                aria-controls="panel3bh-content"
+                id="panel3bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  Where can I watch?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  Watch anywhere, anytime. Sign in with your Youflix account to
+                  watch instantly on the web at youflix.com from your personal
+                  computer or on any internet-connected device that offers the
+                  Youflix app, including smart TVs, smartphones, tablets,
+                  streaming media players and game consoles. You can also
+                  download your favourite shows with the iOS, Android, or
+                  Windows 10 app. Use downloads to watch while you're on the go
+                  and without an internet connection. Take Youflix with you
+                  anywhere.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === "panel4"}
+              onChange={handleChange("panel4")}
+            >
+              <AccordionSummary
+                expandIcon={<MdExpandMore />}
+                aria-controls="panel4bh-content"
+                id="panel5bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  How do I cancel?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  Netflix is flexible. There are no annoying contracts and no
+                  commitments. You can easily cancel your account online in two
+                  clicks. There are no cancellation fees – start or stop your
+                  account anytime.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === "panel5"}
+              onChange={handleChange("panel5")}
+            >
+              <AccordionSummary
+                expandIcon={<MdExpandMore />}
+                aria-controls="panel5bh-content"
+                id="panel4bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  What can I watch on YouFlix?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  Youflix has an extensive library of feature films,
+                  documentaries, TV shows, anime, award-winning Youflix
+                  originals, and more. Watch as much as you want, anytime you
+                  want.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === "panel6"}
+              onChange={handleChange("panel6")}
+            >
+              <AccordionSummary
+                expandIcon={<MdExpandMore />}
+                aria-controls="panel6bh-content"
+                id="panel6bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  Is YouFlix good for kids?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  The Youflix Kids experience is included in your membership to
+                  give parents control while kids enjoy family-friendly TV shows
+                  and films in their own space. Kids profiles come with
+                  PIN-protected parental controls that let you restrict the
+                  maturity rating of content kids can watch and block specific
+                  titles you don’t want kids to see.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          <button className="getStart" onClick={() => navigate("/signup")}>
+            Get Started <MdOutlineArrowForwardIos />
+          </button>
         </div>
       </div>
     </Wrapper>
@@ -164,6 +313,7 @@ const Wrapper = styled.div`
   .faq {
     padding-top: 200px;
     padding-bottom: 200px;
+    align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -172,10 +322,14 @@ const Wrapper = styled.div`
     border-bottom: 10px darkgray solid;
   }
 
-  .dropDownMenu {
+  .accordion {
+    z-index: 0;
     display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    width: 950px;
     justify-content: center;
-    background-color: white;
+    background-color: black;
   }
 
   .faqTitle {
