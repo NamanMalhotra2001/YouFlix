@@ -1,8 +1,7 @@
-import styled from "styled-components";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
 import NavBar from "Components/NavBar";
-import { Link } from "react-router-dom";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -34,7 +33,7 @@ function LandingPage() {
               laptop, and TV.
             </h2>
           </div>
-          <div className="image">potty</div>
+          <div className="image">sample text</div>
         </div>
         <div className="prof">
           <div className="text">
@@ -44,10 +43,20 @@ function LandingPage() {
               space made just for them—free with your membership.
             </p>
           </div>
-          <div className="image">potty</div>
+          <div className="image">sample text</div>
         </div>
         <div className="faq">
           <h1 className="faqTitle">Frequently Asked Questions</h1>
+          <div className="dropDownMenu">
+          <ul className="list">
+            <li>What is Youflix?</li>
+            <li>How much does Youflix cost</li>
+            <li>Where can I watch?</li>
+            <li>How do I cancel?</li>
+            <li>What can I watch on YouFlix?</li>
+            <li>Is YouFlix good for kids?</li>
+          </ul>
+        </div>
         </div>
       </div>
     </Wrapper>
@@ -155,17 +164,23 @@ const Wrapper = styled.div`
   .faq {
     padding-top: 200px;
     padding-bottom: 200px;
+    justify-content: center;
     display: flex;
+    flex-direction: column;
     background-color: black;
-    border-top: 10px darkgray solid;
-    border-bottom: 5px darkgray solid;
+    border-top: 5px darkgray solid;
+    border-bottom: 10px darkgray solid;
+  }
+
+  .dropDownMenu {
+    display: flex;
+    justify-content: center;
+    background-color: white;
   }
 
   .faqTitle {
     color: white;
     font-size: 60px;
-    display: flex;
-    justify-content: center;
     text-align: center;
   }
 `;

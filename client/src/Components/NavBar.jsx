@@ -13,6 +13,8 @@ export default NavBar;
 const Wrapper = styled.div`
 	display: flex;
 	background-color: white;
+	position: sticky;
+	top: 0;
 	height: 90px;
 	justify-content: space-between;
 	align-items: center;
