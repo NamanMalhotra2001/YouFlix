@@ -1,9 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 function NavBar() {
+	const navigate = useNavigate();
 	return (
 		<Wrapper>
-			<h1 className='appName'>YouFlix</h1>
+			<h1 className='appName' onClick={() => navigate('/')}>
+				YouFlix
+			</h1>
 			<button className='signIn'>Sign-In</button>
 		</Wrapper>
 	);
@@ -12,18 +16,20 @@ export default NavBar;
 
 const Wrapper = styled.div`
 	display: flex;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.047);
 	position: sticky;
 	top: 0;
 	height: 90px;
 	justify-content: space-between;
 	align-items: center;
 	padding-inline: 10px;
+	z-index: 999;
 
 	.appName {
 		user-select: none;
 		font-size: 45px;
 		color: #ff0000e6;
+		cursor: pointer;
 	}
 
 	.signIn {
