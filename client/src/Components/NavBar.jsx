@@ -8,7 +8,9 @@ function NavBar() {
 			<h1 className='appName' onClick={() => navigate('/')}>
 				YouFlix
 			</h1>
-			<button className='signIn'>Sign-In</button>
+			<button className='signIn' onClick={() => navigate('signin')}>
+				Sign-In
+			</button>
 		</Wrapper>
 	);
 }

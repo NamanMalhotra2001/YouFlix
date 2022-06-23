@@ -1,4 +1,4 @@
-import NavBar from 'Components/NavBar';
+import NavBar from 'components/NavBar';
 import { MdOutlineArrowForwardIos, MdExpandMore } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
@@ -30,22 +30,17 @@ function LandingPage() {
 						</h4>
 					</div>
 					<div className='getStartHolder'>
-						<button
-							className='getStart'
-							onClick={() => navigate('/signup')}
-						>
+						<button className='getStart' onClick={() => navigate('/signup')}>
 							Get Started <MdOutlineArrowForwardIos />
 						</button>
 					</div>
 				</div>
 				<div className='watchEv'>
 					<div className='text'>
-						<h3 className='additional_main'>
-							Watch everywhere.
-						</h3>
+						<h3 className='additional_main'>Watch everywhere.</h3>
 						<h2 className='additional_sub'>
-							Stream unlimited movies and TV shows on your
-							phone, tablet, laptop, and TV.
+							Stream unlimited movies and TV shows on your phone, tablet,
+							laptop, and TV.
 						</h2>
 					</div>
 
@@ -55,13 +50,10 @@ function LandingPage() {
 				</div>
 				<div className='prof'>
 					<div className='text'>
-						<h3 className='additional_main'>
-							Create profiles for kids.
-						</h3>
+						<h3 className='additional_main'>Create profiles for kids.</h3>
 						<p className='additional_sub'>
-							Send children on adventures with their
-							favourite characters in a space made just for
-							them—free with your membership.
+							Send children on adventures with their favourite characters in
+							a space made just for them—free with your membership.
 						</p>
 					</div>
 					<div className='image'>
@@ -69,9 +61,7 @@ function LandingPage() {
 					</div>
 				</div>
 				<div className='faq'>
-					<h1 className='faqTitle'>
-						Frequently Asked Questions
-					</h1>
+					<h1 className='faqTitle'>Frequently Asked Questions</h1>
 					<div className='accordion'>
 						<Accordion
 							className='accordionTab'
@@ -97,16 +87,14 @@ function LandingPage() {
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography className='tabDetails'>
-									Youflix is a streaming service that
-									offers a wide variety of award-winning
-									TV shows, movies, anime, documentaries
-									and more – on thousands of
-									internet-connected devices. You can
-									watch as much as you want, whenever you
-									want, without a single ad – all for one
-									low monthly price. There's always
-									something new to discover, and new TV
-									shows and movies are added every week!
+									Youflix is a streaming service that offers a wide
+									variety of award-winning TV shows, movies, anime,
+									documentaries and more – on thousands of
+									internet-connected devices. You can watch as much as
+									you want, whenever you want, without a single ad – all
+									for one low monthly price. There's always something
+									new to discover, and new TV shows and movies are added
+									every week!
 								</Typography>
 							</AccordionDetails>
 						</Accordion>
@@ -129,12 +117,10 @@ function LandingPage() {
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography className='tabDetails'>
-									Watch Youflix on your smartphone,
-									tablet, Smart TV, laptop, or streaming
-									device, all for one fixed monthly fee.
-									Plans range from 1 million zeni to 1
-									million 1 zeni a month. No extra costs,
-									no contracts.
+									Watch Youflix on your smartphone, tablet, Smart TV,
+									laptop, or streaming device, all for one fixed monthly
+									fee. Plans range from 1 million zeni to 1 million 1
+									zeni a month. No extra costs, no contracts.
 								</Typography>
 							</AccordionDetails>
 						</Accordion>
@@ -157,19 +143,16 @@ function LandingPage() {
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography className='tabDetails'>
-									Watch anywhere, anytime. Sign in with
-									your Youflix account to watch instantly
-									on the web at youflix.com from your
-									personal computer or on any
-									internet-connected device that offers
-									the Youflix app, including smart TVs,
-									smartphones, tablets, streaming media
-									players and game consoles. You can also
-									download your favourite shows with the
-									iOS, Android, or Windows 10 app. Use
-									downloads to watch while you're on the
-									go and without an internet connection.
-									Take Youflix with you anywhere.
+									Watch anywhere, anytime. Sign in with your Youflix
+									account to watch instantly on the web at youflix.com
+									from your personal computer or on any
+									internet-connected device that offers the Youflix app,
+									including smart TVs, smartphones, tablets, streaming
+									media players and game consoles. You can also download
+									your favourite shows with the iOS, Android, or Windows
+									10 app. Use downloads to watch while you're on the go
+									and without an internet connection. Take Youflix with
+									you anywhere.
 								</Typography>
 							</AccordionDetails>
 						</Accordion>
@@ -192,9 +175,9 @@ function LandingPage() {
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography className='tabDetails'>
-									You are subscribed until you die. Then
-									after you die we will sell your data
-									and your soul to Satan. Good day.
+									You are subscribed until you die. Then after you die
+									we will sell your data and your soul to Satan. Good
+									day.
 								</Typography>
 							</AccordionDetails>
 						</Accordion>
@@ -217,8 +200,7 @@ function LandingPage() {
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography className='tabDetails'>
-									All the latest episodes of failure
-									management.
+									All the latest episodes of failure management.
 								</Typography>
 							</AccordionDetails>
 						</Accordion>
@@ -241,16 +223,13 @@ function LandingPage() {
 							</AccordionSummary>
 							<AccordionDetails>
 								<Typography className='tabDetails'>
-									NO. Lots of adult content. But they'll
-									watch anyways so don't bother.
+									NO. Lots of adult content. But they'll watch anyways
+									so don't bother.
 								</Typography>
 							</AccordionDetails>
 						</Accordion>
 					</div>
-					<button
-						className='getStart'
-						onClick={() => navigate('/signup')}
-					>
+					<button className='getStart' onClick={() => navigate('/signup')}>
 						Get Started <MdOutlineArrowForwardIos />
 					</button>
 				</div>

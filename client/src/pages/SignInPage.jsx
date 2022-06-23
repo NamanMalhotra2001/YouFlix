@@ -1,15 +1,17 @@
+import Button from 'components/Button/Button';
 import NavBar from 'components/NavBar';
 import styled from 'styled-components';
 
-function SignupPage() {
+function SignInPage() {
 	return (
 		<>
 			<NavBar />
-			<Wrapper>SignUp</Wrapper>
+			<Wrapper>SignIn</Wrapper>
+			<Button />
 		</>
 	);
 }
-export default SignupPage;
+export default SignInPage;
 const Wrapper = styled.div`
 	min-height: 300vh;
 	background: white;
