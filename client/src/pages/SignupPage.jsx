@@ -1,23 +1,30 @@
 import NavBar from 'components/NavBar';
 import styled from 'styled-components';
 
-function SignupPage() {
+function SignUpPage() {
 	return (
 		<>
 			<NavBar />
 			<Wrapper>
 				<div className='signupContent'>
-					<h1 className='mainHeading'>Create a free account to start your membership</h1>
-					<p className='additionalText'>You may add additional text here if required</p>
+					<h1 className='mainHeading'>
+						Create a free account to start your membership
+					</h1>
+					<p className='additionalText'>
+						You may add additional text here if required
+					</p>
 					<input className='credentialsEmail' placeholder='  Email'></input>
-					<input className='credentialsPassword' placeholder='  Add a password'></input>
+					<input
+						className='credentialsPassword'
+						placeholder='  Add a password'
+					></input>
 					<button className='submit'>NEXT</button>
 				</div>
 			</Wrapper>
 		</>
 	);
 }
-export default SignupPage;
+export default SignUpPage;
 const Wrapper = styled.div`
 	min-height: 300vh;
 	background: white;
