@@ -26,7 +26,7 @@ function SignUpPage() {
 }
 export default SignUpPage;
 const Wrapper = styled.div`
-	min-height: 300vh;
+	/* min-height: 300vh; */
 	background: white;
 
 	.signupContent {

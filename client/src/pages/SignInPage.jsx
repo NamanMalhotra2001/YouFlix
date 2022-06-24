@@ -1,4 +1,4 @@
-import Button from 'components/Button/Button';
+import Button from 'components/Button';
 import NavBar from 'components/NavBar';
 import styled from 'styled-components';
 
@@ -13,6 +13,6 @@ function SignInPage() {
 }
 export default SignInPage;
 const Wrapper = styled.div`
-	min-height: 300vh;
+	/* min-height: 300vh; */
 	background: white;
 `;
