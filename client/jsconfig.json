@@ -3,6 +3,6 @@
     "baseUrl": "src",
     "incremental": true
   },
-  "include": ["src"],
+  "include": ["src", "components"],
   "exclude": ["node_modules", "build", "functions"]
 }

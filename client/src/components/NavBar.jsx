@@ -1,16 +1,21 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 function NavBar() {
 	const navigate = useNavigate();
+	const location = useLocation();
 	return (
-		<Wrapper>
+		<Wrapper bgcol={location.pathname !== '/' && 'white'}>
 			<h1 className='appName' onClick={() => navigate('/')}>
 				YouFlix
 			</h1>
-			<button className='signIn' onClick={() => navigate('signin')}>
-				Sign-In
-			</button>
+			{location.pathname !== '/signin' ? (
+				<button className='signIn' onClick={() => navigate('/signin')}>
+					Sign-In
+				</button>
+			) : (
+				<></>
+			)}
 		</Wrapper>
 	);
 }
@@ -19,7 +24,8 @@ export default NavBar;
 const Wrapper = styled.div`
 	z-index: 999;
 	display: flex;
-	background-color: rgba(255, 255, 255, 0.047);
+	background-color: ${(props) =>
+		props.bgcol ? props.bgcol : 'rgba(255, 255, 255, 0.047)'};
 	position: sticky;
 	top: 0;
 	height: 90px;
