@@ -1,10 +1,10 @@
-import NavBar from 'components/NavBar';
+import NavBarAuth from 'components/NavBarAuth';
 import styled from 'styled-components';
 
 function SignUpPage() {
 	return (
 		<>
-			<NavBar />
+			<NavBarAuth />
 			<Wrapper>
 				<div className='signupContent'>
 					<h1 className='mainHeading'>

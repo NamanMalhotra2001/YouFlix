@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-function NavBar() {
+function NavBarAuth() {
 	const navigate = useNavigate();
 	const location = useLocation();
 	return (
@@ -19,7 +19,7 @@ function NavBar() {
 		</Wrapper>
 	);
 }
-export default NavBar;
+export default NavBarAuth;
 
 const Wrapper = styled.div`
 	z-index: 999;

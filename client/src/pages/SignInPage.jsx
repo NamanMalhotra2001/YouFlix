@@ -1,11 +1,11 @@
 import Button from 'components/Button';
-import NavBar from 'components/NavBar';
+import NavBarAuth from 'components/NavBarAuth';
 import styled from 'styled-components';
 
 function SignInPage() {
 	return (
 		<>
-			<NavBar />
+			<NavBarAuth />
 			<Wrapper>SignIn</Wrapper>
 			<Button />
 		</>
@@ -13,6 +13,5 @@ function SignInPage() {
 }
 export default SignInPage;
 const Wrapper = styled.div`
-	/* min-height: 300vh; */
 	background: white;
 `;

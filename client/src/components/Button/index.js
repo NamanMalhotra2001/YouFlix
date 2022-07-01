@@ -1,21 +1,36 @@
-export default function Button() {
-	const handleClick = (event) => {
-		// 👇️ toggle styles on click
-		if (event.currentTarget.style.backgroundColor) {
-			event.currentTarget.style.backgroundColor = null;
-			event.currentTarget.style.color = null;
-		} else {
-			event.currentTarget.style.backgroundColor = 'salmon';
-			event.currentTarget.style.color = 'white';
-		}
+import { useState } from 'react';
 
-		// 👇️ toggle class on click
-		event.currentTarget.classList.toggle('my-class-1', 'my-class-2');
+export default function Button() {
+	const [isActive, setIsActive] = useState(false);
+
+	const handleMouseDown = () => {
+		setIsActive((current) => !current);
+	};
+
+	const handleMouseUp = () => {
+		setIsActive((current) => !current);
 	};
 
 	return (
 		<div>
-			<button onClick={handleClick}>Click</button>
+			<button
+				style={isActive ? styles.active : styles.inactive}
+				onMouseDown={handleMouseDown}
+				onMouseUp={handleMouseUp}
+			>
+				Click
+			</button>
 		</div>
 	);
 }
+
+
+
+const styles = {
+	active: {
+		backgroundColor: 'red',
+	},
+	inactive: {
+		backgroundColor: 'gray',
+	},
+};

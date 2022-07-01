@@ -1,4 +1,4 @@
-import NavBar from 'components/NavBar';
+import NavBarAuth from 'components/NavBarAuth';
 import { MdOutlineArrowForwardIos, MdExpandMore } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
@@ -18,7 +18,7 @@ function LandingPage() {
 
 	return (
 		<Wrapper>
-			<NavBar />
+			<NavBarAuth />
 			<div className='mainBodyContainer'>
 				<div className='mainBody'>
 					<div className='headings'>
